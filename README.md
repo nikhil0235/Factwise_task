@@ -44,10 +44,3 @@ The application uses a local JSON file (celebrities.json) located in the src/ass
 Contribution
 Contributions are welcome! Please create an issue or submit a pull request for any changes.
 
-Contact
-For any inquiries or feedback, feel free to contact:
-
-Your Name - your.email@example.com
-Replace "your-username" with your actual GitHub username and adjust the contact section as needed.
-
-Feel free to add more details or sections based on your project's specifics.
