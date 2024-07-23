@@ -12,23 +12,26 @@ import SearchBar from './components/SearchBar';
 
 const App = () => {
   // State to manage the list of users
-  const [users, setUsers] = useState(data);
+  const [users, setUsers] = useState([]);
   // State to manage the ID of the currently active (opened) user accordion
   const [activeUserId, setActiveUserId] = useState(null);
   // State to manage whether the app is in edit mode
   const [editMode, setEditMode] = useState(false);
   // State to manage the current search term
   const [searchTerm, setSearchTerm] = useState("");
+  // State to manage the filtered search data
+  const [searchData, setSearchData] = useState([]);
 
   // useEffect hook to update the user list with calculated ages on component mount
   useEffect(() => {
-    const updatedUsers = users.map(user => ({
+    const updatedUsers = data.map(user => ({
       ...user,
       age: calculateAge(user.dob)
     }));
 
     setUsers(updatedUsers);
-  }, [searchTerm]);
+    setSearchData(updatedUsers); // Initialize searchData with all users
+  }, []);
 
   // Function to calculate age based on date of birth
   const calculateAge = (dob) => {
@@ -40,12 +43,11 @@ const App = () => {
   const onSearch = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
-    const updatedUsers = data.filter(user =>
+    const updatedUsers = users.filter(user =>
       user.first.toLowerCase().includes(term.toLowerCase()) ||
       user.last.toLowerCase().includes(term.toLowerCase())
     );
-    
-    setUsers(updatedUsers);
+    setSearchData(updatedUsers);
   };
 
   // Function to toggle the accordion for a user
@@ -62,28 +64,32 @@ const App = () => {
 
   // Function to handle saving the updated user details
   const handleSave = (updatedUser) => {
-    setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
+    const updatedUsers = users.map(user => user.id === updatedUser.id ? updatedUser : user);
+    setUsers(updatedUsers);
+    setSearchData(updatedUsers); // Update the filtered data as well
     setEditMode(false);
   };
 
   // Function to handle deleting a user
   const handleDelete = (id) => {
-    setUsers(users.filter(user => user.id !== id));
+    const updatedUsers = users.filter(user => user.id !== id);
+    setUsers(updatedUsers);
+    setSearchData(updatedUsers); // Update the filtered data as well
   };
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="flex-grow ">
+      <div className="flex-grow">
         {/* Header section */}
         <div className='text-4xl font-bold text-pretty text-center items-center border rounded-lg shadow-md p-4 mb-4 bg-white'>
           Celebrity Manager
         </div>  
         {/* Search bar component */}
         <SearchBar searchTerm={searchTerm} onSearch={onSearch} />
-        {users.length > 0 ? (
+        {searchData.length > 0 ? (
           <div className="user-list">
             {/* Rendering the list of users */}
-            {users.map(user => (
+            {searchData.map(user => (
               <UserAccordion
                 key={user.id}
                 user={user}
