@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+Celebrity Manager (FactWise Frontend Task)
+Celebrity Manager is a React-based application designed to manage a list of celebrities. The application provides functionalities to search, edit, and delete celebrity details using a user-friendly accordion interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Search: Search celebrities by their first or last names.
+User Accordion: Expandable sections to view detailed information about each celebrity.
+Edit Mode: Update celebrity information with a form.
+Delete Functionality: Remove celebrities from the list.
+Responsive Design: Ensures the application looks good on all devices.
+Screenshots
+Include some screenshots of your application here.
+![alt text](<Screenshot 2024-07-23 214300.png>) ![alt text](<Screenshot 2024-07-23 214433.png>) ![alt text](<Screenshot 2024-07-23 214412.png>) ![alt text](<Screenshot 2024-07-23 214344.png>) ![alt text](<Screenshot 2024-07-23 214321.png>)
 
-## Available Scripts
+Installation
+Clone the repository:
 
-In the project directory, you can run:
 
-### `npm start`
+git clone https://github.com/nikhil0235/Factwise_task.git
+Navigate to the project directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+cd celebrity-manager
+Install the dependencies:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
+Usage
+Start the development server:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
+Open your browser and navigate to http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+File Structure
+php
+Copy code
+celebrity-manager/
+├── public/
+├── src/
+│   ├── asset/
+│   │   └── celebrities.json    # JSON file containing celebrity data
+│   ├── components/
+│   │   ├── EditUserForm.js     # Component to edit user information
+│   │   ├── DeleteUserDialog.js # Component for delete confirmation dialog
+│   │   ├── Footer.js           # Footer component
+│   │   ├── SearchBar.js        # Search bar component
+│   │   └── UserAccordion.js    # Accordion component to display user details
+│   ├── App.js                  # Main application component
+│   └── App.css                 # Main stylesheet
+├── .gitignore
+├── package.json
+└── README.md
+Components
+App.js: The main component that manages the state and renders other components.
+UserAccordion.js: Displays each user's details in an accordion style.
+EditUserForm.js: Form component for editing user details.
+DeleteUserDialog.js: Dialog component for confirming user deletion.
+Footer.js: Footer component.
+SearchBar.js: Search bar component for filtering users.
+Data
+The application uses a local JSON file (celebrities.json) located in the src/asset/ directory to populate the list of celebrities.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contribution
+Contributions are welcome! Please create an issue or submit a pull request for any changes.
 
-### `npm run eject`
+Contact
+For any inquiries or feedback, feel free to contact:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Your Name - your.email@example.com
+Replace "your-username" with your actual GitHub username and adjust the contact section as needed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to add more details or sections based on your project's specifics.
