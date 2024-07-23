@@ -31,25 +31,6 @@ Start the development server:
 npm start
 Open your browser and navigate to http://localhost:3000.
 
-File Structure
-php
-Copy code
-celebrity-manager/
-├── public/
-├── src/
-│   ├── asset/
-│   │   └── celebrities.json    # JSON file containing celebrity data
-│   ├── components/
-│   │   ├── EditUserForm.js     # Component to edit user information
-│   │   ├── DeleteUserDialog.js # Component for delete confirmation dialog
-│   │   ├── Footer.js           # Footer component
-│   │   ├── SearchBar.js        # Search bar component
-│   │   └── UserAccordion.js    # Accordion component to display user details
-│   ├── App.js                  # Main application component
-│   └── App.css                 # Main stylesheet
-├── .gitignore
-├── package.json
-└── README.md
 Components
 App.js: The main component that manages the state and renders other components.
 UserAccordion.js: Displays each user's details in an accordion style.
