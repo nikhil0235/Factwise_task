@@ -9,7 +9,7 @@ Delete Functionality: Remove celebrities from the list.
 Responsive Design: Ensures the application looks good on all devices.
 Screenshots
 Include some screenshots of your application here.
-![alt text](<Screenshot 2024-07-23 214300.png>) ![alt text](<Screenshot 2024-07-23 214433.png>) ![alt text](<Screenshot 2024-07-23 214412.png>) ![alt text](<Screenshot 2024-07-23 214344.png>) ![alt text](<Screenshot 2024-07-23 214321.png>)
+![alt text](</screenshots/Screenshot 2024-07-23 214300.png>) ![alt text](</screenshots/Screenshot 2024-07-23 214433.png>) ![alt text](</screenshots/Screenshot 2024-07-23 214412.png>) ![alt text](</screenshots/Screenshot 2024-07-23 214344.png>) ![alt text](</screenshots/Screenshot 2024-07-23 214321.png>)
 
 Installation
 Clone the repository:
